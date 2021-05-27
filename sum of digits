@@ -1,0 +1,18 @@
+//# RecursiveFunction
+//Write a program in C to find the sum of digits of a number using recursion
+#include<stdio.h>
+int sum_of_digits(int num)
+{
+	if (num == 0)
+    	return 0;
+    else
+    	return (num % 10 + sum_of_digits(num / 10));
+}
+int main()
+{
+	int num;
+	printf("Input number :");
+	scanf("%d",&num);
+	printf("Sum of digits: %d",sum_of_digits(num));
+	return 0;
+}
